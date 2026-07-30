@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Portfolio</title>
+</head>
+<body>
+  <h1>Welcome to My Portfolio</h1>
+  <p>Yeh meri pehli website hai!</p>
+  
+  <!-- Image add karna -->
+  <img src="images/pic.png" alt="My Portfolio Image" width="300">
+</body>
+</html>
