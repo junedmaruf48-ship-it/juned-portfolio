@@ -1,177 +1,81 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
+<div class="project-card">
+<h2>📄 Smart Document Q&A (RAG)</h2>
+<p>AI-powered application that answers questions from uploaded PDF documents using Retrieval-Augmented Generation.</p>
+</div>
 
-html{
-    scroll-behavior:smooth;
-}
+<br>
 
-body{
-    background:linear-gradient(135deg,#0f172a,#1e3a8a,#0f172a);
-    color:#fff;
-    overflow-x:hidden;
-}
+<div class="project-card">
+<h2>😊 Face Recognition Attendance System</h2>
+<p>AI system that automatically detects faces and marks attendance using Python and OpenCV.</p>
+</div>
 
-/* Navigation */
+<br>
 
-nav{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    padding:20px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background:rgba(0,0,0,.35);
-    backdrop-filter:blur(10px);
-    z-index:1000;
-}
+<div class="project-card">
+<h2>🛡️ Fake News Detection</h2>
+<p>Machine Learning model that classifies news articles as real or fake using Natural Language Processing.</p>
+</div>
 
-.logo{
-    font-size:32px;
-    font-weight:bold;
-    color:#00e5ff;
-}
+<br>
 
-nav ul{
-    display:flex;
-    list-style:none;
-}
+<div class="project-card">
+<h2>🎬 Movie Recommendation System</h2>
+<p>Recommendation engine that suggests movies based on user preferences using Machine Learning.</p>
+</div>
 
-nav ul li{
-    margin-left:30px;
-}
+<br>
 
-nav ul li a{
-    color:white;
-    text-decoration:none;
-    transition:.3s;
-    font-size:17px;
-}
+<div class="project-card">
+<h2>📷 Image Classification using CNN</h2>
+<p>Deep Learning project that classifies images into different categories using Convolutional Neural Networks.</p>
+</div>
 
-nav ul li a:hover{
-    color:#00e5ff;
-}
+<br>
 
-/* Home */
+<div class="project-card">
+<h2>🩺 AI Medical Assistant</h2>
+<p>AI assistant that provides basic health information and symptom guidance using Machine Learning.</p>
+</div>
 
-.home{
-    min-height:100vh;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:120px 8%;
-}
+<br>
 
-.content{
-    width:55%;
-}
+<div class="project-card">
+<h2>💼 Personal Portfolio Website</h2>
+<p>Modern responsive portfolio website developed using HTML, CSS and JavaScript.</p>
+</div>
 
-.content h3{
-    font-size:28px;
-}
+<br>
 
-.content h1{
-    font-size:65px;
-    color:#00e5ff;
-    margin:10px 0;
-}
+<div class="project-card">
+<h2>🤖 Chatbot using NLP</h2>
+<p>Conversational AI chatbot built with Natural Language Processing techniques to understand and respond to user queries.</p>
+</div>
 
-.content h2{
-    font-size:35px;
-    margin-bottom:20px;
-}
+<br>
 
-#typing{
-    color:#00ff99;
-}
+<div class="project-card">
+<h2>📊 Sentiment Analysis</h2>
+<p>Machine Learning model that analyzes text data (like tweets or reviews) and classifies sentiment as positive, negative, or neutral.</p>
+</div>
 
-.content p{
-    font-size:18px;
-    line-height:30px;
-    margin-bottom:30px;
-}
+<br>
 
-.buttons{
-    display:flex;
-    gap:20px;
-}
+<div class="project-card">
+<h2>🔍 Object Detection with YOLO</h2>
+<p>Computer Vision project that detects and labels multiple objects in real-time using the YOLO algorithm.</p>
+</div>
 
-.btn,
-.btn2{
-    padding:14px 35px;
-    border-radius:40px;
-    text-decoration:none;
-    font-weight:bold;
-    transition:.3s;
-}
+<br>
 
-.btn{
-    background:#00e5ff;
-    color:#000;
-}
+<div class="project-card">
+<h2>🧠 Predictive Analytics</h2>
+<p>AI system that predicts future outcomes (like sales or stock trends) using historical data and machine learning models.</p>
+</div>
 
-.btn:hover{
-    transform:translateY(-5px);
-}
+<br>
 
-.btn2{
-    border:2px solid #00e5ff;
-    color:white;
-}
-
-.btn2:hover{
-    background:#00e5ff;
-    color:black;
-}
-
-.social{
-    margin-top:35px;
-}
-
-.social a{
-    color:white;
-    font-size:28px;
-    margin-right:20px;
-    transition:.3s;
-}
-
-.social a:hover{
-    color:#00e5ff;
-    transform:scale(1.2);
-}
-
-.image{
-    width:40%;
-    text-align:center;
-}
-
-.image img{
-    width:380px;
-    height:380px;
-    object-fit:cover;
-    border-radius:50%;
-    border:6px solid #00e5ff;
-    box-shadow:0 0 40px #00e5ff;
-    animation:float 3s ease-in-out infinite;
-}
-
-@keyframes float{
-
-0%{
-transform:translateY(0);
-}
-
-50%{
-transform:translateY(-20px);
-}
-
-100%{
-transform:translateY(0);
-}
-
-}
+<div class="project-card">
+<h2>🌐 Text Summarization</h2>
+<p>Deep Learning model that automatically generates concise summaries from long articles using sequence-to-sequence models.</p>
+</div>
