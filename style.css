@@ -10,9 +10,25 @@ html{
 }
 
 body{
-    background:linear-gradient(135deg,#0f172a,#1e3a8a,#0f172a);
+    background:linear-gradient(-45deg,#0f172a,#1e3a8a,#2563eb,#0f172a);
+    background-size:400% 400%;
+    animation:gradientBG 12s ease infinite;
     color:#fff;
     overflow-x:hidden;
+}
+
+/* Animated Background */
+
+@keyframes gradientBG{
+    0%{
+        background-position:0% 50%;
+    }
+    50%{
+        background-position:100% 50%;
+    }
+    100%{
+        background-position:0% 50%;
+    }
 }
 
 /* Navigation */
@@ -26,13 +42,14 @@ nav{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    background:rgba(0,0,0,.35);
-    backdrop-filter:blur(10px);
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
+    box-shadow:0 5px 20px rgba(0,0,0,.3);
     z-index:1000;
 }
 
 .logo{
-    font-size:32px;
+    font-size:35px;
     font-weight:bold;
     color:#00e5ff;
 }
@@ -49,8 +66,8 @@ nav ul li{
 nav ul li a{
     color:white;
     text-decoration:none;
-    transition:.3s;
-    font-size:17px;
+    font-size:18px;
+    transition:.4s;
 }
 
 nav ul li a:hover{
@@ -69,16 +86,17 @@ nav ul li a:hover{
 
 .content{
     width:55%;
+    animation:slideLeft 1s ease;
 }
 
 .content h3{
-    font-size:28px;
+    font-size:30px;
 }
 
 .content h1{
-    font-size:65px;
+    font-size:70px;
     color:#00e5ff;
-    margin:10px 0;
+    margin:15px 0;
 }
 
 .content h2{
@@ -91,10 +109,12 @@ nav ul li a:hover{
 }
 
 .content p{
-    font-size:18px;
-    line-height:30px;
-    margin-bottom:30px;
+    font-size:19px;
+    line-height:32px;
+    margin-bottom:35px;
 }
+
+/* Buttons */
 
 .buttons{
     display:flex;
@@ -103,20 +123,22 @@ nav ul li a:hover{
 
 .btn,
 .btn2{
-    padding:14px 35px;
-    border-radius:40px;
+    padding:15px 35px;
+    border-radius:50px;
     text-decoration:none;
     font-weight:bold;
-    transition:.3s;
+    transition:.4s;
 }
 
 .btn{
     background:#00e5ff;
-    color:#000;
+    color:black;
+    box-shadow:0 0 20px #00e5ff;
 }
 
 .btn:hover{
-    transform:translateY(-5px);
+    transform:translateY(-8px);
+    box-shadow:0 0 40px #00e5ff;
 }
 
 .btn2{
@@ -129,21 +151,25 @@ nav ul li a:hover{
     color:black;
 }
 
+/* Social Icons */
+
 .social{
     margin-top:35px;
 }
 
 .social a{
     color:white;
-    font-size:28px;
-    margin-right:20px;
-    transition:.3s;
+    font-size:30px;
+    margin-right:18px;
+    transition:.4s;
 }
 
 .social a:hover{
     color:#00e5ff;
-    transform:scale(1.2);
+    transform:translateY(-8px) scale(1.2);
 }
+
+/* Image */
 
 .image{
     width:40%;
@@ -151,27 +177,99 @@ nav ul li a:hover{
 }
 
 .image img{
-    width:380px;
-    height:380px;
+    width:400px;
+    height:400px;
     object-fit:cover;
     border-radius:50%;
     border:6px solid #00e5ff;
-    box-shadow:0 0 40px #00e5ff;
-    animation:float 3s ease-in-out infinite;
+    box-shadow:0 0 30px #00e5ff,
+               0 0 60px #00e5ff,
+               0 0 100px #00e5ff;
+    animation:float 4s ease-in-out infinite;
+    transition:.4s;
+}
+
+.image img:hover{
+    transform:scale(1.05);
 }
 
 @keyframes float{
-
-0%{
-transform:translateY(0);
+    0%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-20px);
+    }
+    100%{
+        transform:translateY(0);
+    }
 }
 
-50%{
-transform:translateY(-20px);
+@keyframes slideLeft{
+    from{
+        opacity:0;
+        transform:translateX(-80px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
 }
 
-100%{
-transform:translateY(0);
+/* Responsive */
+
+@media(max-width:900px){
+
+nav{
+    flex-direction:column;
+    padding:15px;
+}
+
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-top:10px;
+}
+
+nav ul li{
+    margin:10px;
+}
+
+.home{
+    flex-direction:column-reverse;
+    text-align:center;
+    padding-top:150px;
+}
+
+.content{
+    width:100%;
+}
+
+.image{
+    width:100%;
+    margin-bottom:40px;
+}
+
+.image img{
+    width:280px;
+    height:280px;
+}
+
+.content h1{
+    font-size:45px;
+}
+
+.content h2{
+    font-size:26px;
+}
+
+.content p{
+    font-size:16px;
+}
+
+.buttons{
+    justify-content:center;
+    flex-wrap:wrap;
 }
 
 }
