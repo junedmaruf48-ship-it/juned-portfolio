@@ -67,11 +67,29 @@ nav ul li a{
     color:white;
     text-decoration:none;
     font-size:18px;
-    transition:.4s;
+    position:relative;
+    padding:8px 0;
+    transition:0.4s;
+}
+
+nav ul li a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0;
+    height:3px;
+    background:#00e5ff;
+    border-radius:10px;
+    transition:0.4s;
 }
 
 nav ul li a:hover{
     color:#00e5ff;
+}
+
+nav ul li a:hover::after{
+    width:100%;
 }
 
 /* Home */
@@ -82,11 +100,6 @@ nav ul li a:hover{
     justify-content:space-between;
     align-items:center;
     padding:120px 8%;
-}
-
-.content{
-    width:55%;
-    animation:slideLeft 1s ease;
 }
 
 .content h3{
@@ -127,29 +140,37 @@ nav ul li a:hover{
     padding:15px 35px;
     border-radius:50px;
     text-decoration:none;
-    font-weight:bold;
-    transition:.4s;
+    font-weight:600;
+    font-size:17px;
+    transition:0.4s;
+    display:inline-block;
 }
 
+/* Primary Button */
+
 .btn{
-    background:#00e5ff;
-    color:black;
+    background:linear-gradient(45deg,#00e5ff,#0099ff);
+    color:white;
     box-shadow:0 0 20px #00e5ff;
 }
 
 .btn:hover{
-    transform:translateY(-8px);
+    transform:translateY(-8px) scale(1.05);
     box-shadow:0 0 40px #00e5ff;
 }
+
+/* Secondary Button */
 
 .btn2{
     border:2px solid #00e5ff;
     color:white;
+    background:transparent;
 }
 
 .btn2:hover{
     background:#00e5ff;
-    color:black;
+    color:#000;
+    transform:translateY(-8px) scale(1.05);
 }
 
 /* Social Icons */
@@ -172,9 +193,13 @@ nav ul li a:hover{
 
 /* Image */
 
+
+
 .image{
     width:40%;
-    text-align:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 .image img{
@@ -183,15 +208,35 @@ nav ul li a:hover{
     object-fit:cover;
     border-radius:50%;
     border:6px solid #00e5ff;
-    box-shadow:0 0 30px #00e5ff,
-               0 0 60px #00e5ff,
-               0 0 100px #00e5ff;
-    animation:float 4s ease-in-out infinite;
+    box-shadow:
+    0 0 20px #00e5ff,
+    0 0 40px #00e5ff,
+    0 0 80px #00e5ff;
+    animation:float 4s ease-in-out infinite,
+              glow 2s infinite alternate;
     transition:.4s;
+    cursor:pointer;
 }
 
 .image img:hover{
-    transform:scale(1.05);
+    transform:scale(1.08) rotate(3deg);
+}
+
+@keyframes glow{
+
+from{
+box-shadow:
+0 0 20px #00e5ff,
+0 0 40px #00e5ff;
+}
+
+to{
+box-shadow:
+0 0 40px #00e5ff,
+0 0 80px #00e5ff,
+0 0 120px #00e5ff;
+}
+
 }
 
 @keyframes float{
@@ -206,16 +251,7 @@ nav ul li a:hover{
     }
 }
 
-@keyframes slideLeft{
-    from{
-        opacity:0;
-        transform:translateX(-80px);
-    }
-    to{
-        opacity:1;
-        transform:translateX(0);
-    }
-}
+
 
 /* Responsive */
 
@@ -260,7 +296,7 @@ nav ul li{
     font-size:45px;
 }
 
-.content h2{
+.content h2{ 
     font-size:26px;
 }
 
@@ -274,3 +310,63 @@ nav ul li{
 }
 
 }
+
+/* ===== Glass Card ===== */
+
+.content{
+    width:55%;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.15);
+    backdrop-filter:blur(15px);
+    border-radius:25px;
+    padding:40px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+    transition:.4s;
+    animation:fadeInLeft 1.2s ease;
+
+}
+
+.content:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 50px rgba(0,229,255,0.35);
+}
+
+/* ===== Text Animation ===== */
+
+@keyframes fadeInLeft{
+
+0%{
+    opacity:0;
+    transform:translateX(-80px);
+}
+
+100%{
+    opacity:1;
+    transform:translateX(0);
+}
+
+}
+
+/* ===== Image Animation ===== */
+
+.image{
+    animation:fadeInRight 1.5s ease;
+}
+
+@keyframes fadeInRight{
+
+0%{
+    opacity:0;
+    transform:translateX(100px);
+}
+
+100%{
+    opacity:1;
+    transform:translateX(0);
+}
+
+}
+
+
+
+
