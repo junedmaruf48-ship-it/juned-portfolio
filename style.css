@@ -97,6 +97,7 @@ nav ul li a:hover{
     font-size:70px;
     color:#00e5ff;
     margin:15px 0;
+    text-shadow:0 0 20px #00e5ff;
 }
 
 .content h2{
